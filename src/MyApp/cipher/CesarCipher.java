@@ -18,7 +18,7 @@ public class CesarCipher {
                 result.append(c);
             } else if ( specialSymbols.indexOf(ch) != -1){
                 int index = specialSymbols.indexOf(ch);
-                int shiftedIndex = (index + key + specialSymbols.length() % specialSymbols.length());
+                int shiftedIndex = (index + key + specialSymbols.length()) % specialSymbols.length();
                 result.append(specialSymbols.charAt(shiftedIndex));
             } else{
                 result.append(ch);
