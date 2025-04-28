@@ -2,6 +2,7 @@ package MyApp.runner;
 
 import MyApp.CommandType;
 import MyApp.Constants;
+import MyApp.cipher.BruteForce;
 import MyApp.cipher.CesarCipherAction;
 import MyApp.cipher.Decryption;
 import MyApp.cipher.Encryption;
@@ -51,6 +52,8 @@ public class ApplicationRunner {
             }
             int key = Integer.parseInt(args[Constants.KEY_ARG_POSITION]);
             action = new Decryption(key);
+        } else if (command == CommandType.BRUTE_FORCE) {
+            action = new BruteForce();
         } else {
             System.out.println("Unknown command");
             return;
